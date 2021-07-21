@@ -1,9 +1,4 @@
-//
-//  SceneDelegate.swift
-//  pokemonEstudio
-//
-//  Created by Silvia Casanova Martinez on 11/3/21.
-//
+
 
 import UIKit
 

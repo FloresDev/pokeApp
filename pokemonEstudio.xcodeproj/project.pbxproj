@@ -12,7 +12,6 @@
 		61A7386F261DAED600F620D9 /* Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A7386E261DAED600F620D9 /* Gif.swift */; };
 		61A7387B261DB38F00F620D9 /* Gif2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 61A7387A261DB38F00F620D9 /* Gif2.gif */; };
 		61A73880261DB49C00F620D9 /* Gif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 61A7387F261DB49C00F620D9 /* Gif.gif */; };
-		61BBF6CA261B6C9A008687A4 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BBF6C9261B6C9A008687A4 /* AddViewController.swift */; };
 		61C18B38261CBEC0002C362B /* PresentationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C18B37261CBEC0002C362B /* PresentationViewController.swift */; };
 		61CD233826132B7B007E2C99 /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CD233726132B7B007E2C99 /* Results.swift */; };
 		61CD233D2613380B007E2C99 /* Stat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CD233C2613380B007E2C99 /* Stat.swift */; };
@@ -22,8 +21,6 @@
 		61D85DA026160B790002DDCE /* PokeAbility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D85D9F26160B790002DDCE /* PokeAbility.swift */; };
 		61D85DA326160C8F0002DDCE /* Flavor_textAb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D85DA226160C8F0002DDCE /* Flavor_textAb.swift */; };
 		61D85DA626160D590002DDCE /* AbilityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D85DA526160D590002DDCE /* AbilityViewController.swift */; };
-		61E1F40D261C558900409779 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E1F40C261C558900409779 /* WebViewController.swift */; };
-		61E1F411261C5E7600409779 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E1F410261C5E7600409779 /* Session.swift */; };
 		61F4CF8E25FA2B1B00C2671C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F4CF8D25FA2B1B00C2671C /* AppDelegate.swift */; };
 		61F4CF9025FA2B1B00C2671C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F4CF8F25FA2B1B00C2671C /* SceneDelegate.swift */; };
 		61F4CF9225FA2B1B00C2671C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F4CF9125FA2B1B00C2671C /* ViewController.swift */; };
@@ -54,7 +51,6 @@
 		61A7386E261DAED600F620D9 /* Gif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gif.swift; sourceTree = "<group>"; };
 		61A7387A261DB38F00F620D9 /* Gif2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Gif2.gif; sourceTree = "<group>"; };
 		61A7387F261DB49C00F620D9 /* Gif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Gif.gif; sourceTree = "<group>"; };
-		61BBF6C9261B6C9A008687A4 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		61C18B37261CBEC0002C362B /* PresentationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationViewController.swift; sourceTree = "<group>"; };
 		61CD233726132B7B007E2C99 /* Results.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
 		61CD233C2613380B007E2C99 /* Stat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stat.swift; sourceTree = "<group>"; };
@@ -64,8 +60,6 @@
 		61D85D9F26160B790002DDCE /* PokeAbility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeAbility.swift; sourceTree = "<group>"; };
 		61D85DA226160C8F0002DDCE /* Flavor_textAb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flavor_textAb.swift; sourceTree = "<group>"; };
 		61D85DA526160D590002DDCE /* AbilityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbilityViewController.swift; sourceTree = "<group>"; };
-		61E1F40C261C558900409779 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
-		61E1F410261C5E7600409779 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		61F4CF8A25FA2B1A00C2671C /* pokemonEstudio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pokemonEstudio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61F4CF8D25FA2B1B00C2671C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		61F4CF8F25FA2B1B00C2671C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -131,10 +125,8 @@
 				61F4CFAD25FA2DE400C2671C /* Mappable.swift */,
 				61FF239626123E42003CF715 /* Type.swift */,
 				61FF239926123F6C003CF715 /* subType.swift */,
-				61E1F40C261C558900409779 /* WebViewController.swift */,
 				61FF239C261240FB003CF715 /* Move.swift */,
 				61F9BB2D261463CB009B57E8 /* PokeMove.swift */,
-				61BBF6C9261B6C9A008687A4 /* AddViewController.swift */,
 				61CD233726132B7B007E2C99 /* Results.swift */,
 				61D85D9F26160B790002DDCE /* PokeAbility.swift */,
 				61CD233F26133833007E2C99 /* SubStat.swift */,
@@ -150,7 +142,6 @@
 				610C9DC12617584A00312864 /* OficialArt.swift */,
 				61FF239F26124141003CF715 /* subMove.swift */,
 				61FD4C14261FAD0500E0181A /* Reachability.swift */,
-				61E1F410261C5E7600409779 /* Session.swift */,
 				61F9BB30261464A7009B57E8 /* MoveViewController.swift */,
 				61F4CFB325FA2FE600C2671C /* Sprite.swift */,
 				61D85DA526160D590002DDCE /* AbilityViewController.swift */,
@@ -241,7 +232,6 @@
 			files = (
 				61F4CFB125FA2EE800C2671C /* Pokemon.swift in Sources */,
 				610C9DC22617584A00312864 /* OficialArt.swift in Sources */,
-				61BBF6CA261B6C9A008687A4 /* AddViewController.swift in Sources */,
 				61F4CFB725FA30AE00C2671C /* Connection.swift in Sources */,
 				61FF239D261240FB003CF715 /* Move.swift in Sources */,
 				61CD233D2613380B007E2C99 /* Stat.swift in Sources */,
@@ -259,8 +249,6 @@
 				61FDF89B2613C41500449570 /* Ability.swift in Sources */,
 				61FF239A26123F6C003CF715 /* subType.swift in Sources */,
 				61F9BB31261464A7009B57E8 /* MoveViewController.swift in Sources */,
-				61E1F411261C5E7600409779 /* Session.swift in Sources */,
-				61E1F40D261C558900409779 /* WebViewController.swift in Sources */,
 				61C18B38261CBEC0002C362B /* PresentationViewController.swift in Sources */,
 				61FDF89E2613C46900449570 /* subAbility.swift in Sources */,
 				61F4CF9025FA2B1B00C2671C /* SceneDelegate.swift in Sources */,

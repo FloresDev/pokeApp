@@ -4,7 +4,6 @@ import UIKit
 
 class TableViewController: UITableViewController, UISearchBarDelegate,UISearchResultsUpdating {
     
-    @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var label: UILabel!
     
     var pokemons: [Pokemon?] = []
@@ -35,14 +34,7 @@ class TableViewController: UITableViewController, UISearchBarDelegate,UISearchRe
         super.viewDidLoad()
         
         startHost(at: 0) //Se inicia star host a 0 para la comprobacion de la conexion
-
-        //Se inicia el nombre que se queda guardado en la persistencia del telefono
-        self.userNameLabel.text = Session.current.userName ?? ""
-        Session.current.userName = "Jorge"
-        Session.save()
        
-        
-        
         self.setupLoadingViews()//se hace la llamada a la funcion de carga
         
         //se habilita el boton editar en la barra de navegacion
@@ -105,7 +97,7 @@ class TableViewController: UITableViewController, UISearchBarDelegate,UISearchRe
                                             self.pokemons = self.pokemons.sorted { ($0!.name!) < ($1!.name!) }
                                             self.tableView.reloadData()
                                             
-                                            self.showNotification(text: "",subtitle: String(self.MAX_POKEMONS))
+                                           
                                         }
                                     
                                     }
@@ -154,27 +146,6 @@ class TableViewController: UITableViewController, UISearchBarDelegate,UISearchRe
         }
         tableView.reloadData()
     }
-    
-    
-    //Funcion para mostrar las notificaciones
-    func showNotification(text: String, subtitle: String){
-       
-            let content = UNMutableNotificationContent()
-            content.title = "Pokemons descargados: "
-            content.subtitle = subtitle
-            content.body = "HAZTE CON TODOS!!!"
-            content.sound = .default
-            content.badge = 1
-            //se crea el trigger
-            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 2, repeats: false)
-            //Creamos la request y añadidos el content del trigger
-            let request = UNNotificationRequest(identifier: "Mi Notificacion", content: content, trigger: trigger)
-            //añadimos la notificacion al centro de notificaciones
-            UNUserNotificationCenter.current().add(request) { (error) in
-                
-                print (error.debugDescription)
-            }
-        }
     
     
     
@@ -277,24 +248,6 @@ class TableViewController: UITableViewController, UISearchBarDelegate,UISearchRe
      }
     }
     
-    //Metodos de unWind para recuperar los datos del pokemon añadido
-    @IBAction func cancel(segue: UIStoryboardSegue){
-        
-    }
-    //Action del boton de añadir de la barra de navegacion con la funcion para recuperar los datos
-    @IBAction func save(segue: UIStoryboardSegue){
-        
-        if let addVC = segue.source as? AddViewController,
-           let newPokemon = addVC.pokemon,
-           let newImage = addVC.image {
-            //Añadirlos a la lista de pokemons y de imágenes y refrescamos la tabla
-            newPokemon.image = newImage
-            filteredData.append(newPokemon)
-            pokemons.append(newPokemon)
-            
-            self.tableView.reloadData()
-        }
-    }
     
     //configuracion del activity indicator
     func setupLoadingViews(){
