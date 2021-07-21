@@ -37,8 +37,6 @@ class TableViewController: UITableViewController, UISearchBarDelegate,UISearchRe
        
         self.setupLoadingViews()//se hace la llamada a la funcion de carga
         
-        //se habilita el boton editar en la barra de navegacion
-        navigationItem.rightBarButtonItem = editButtonItem
         
         //se iguala filtered data a pokemons para que tengan el mismo valor al iniciar la vista. filtered data sera la variable usada a partir de ahora para la vista, de esta manera se actualiza la tabla al hacer la busqueda en la barra
         filteredData = pokemons
@@ -55,8 +53,6 @@ class TableViewController: UITableViewController, UISearchBarDelegate,UISearchRe
             }
         }
         
-        //Titulo de la vista en la barra de navegacion
-        title = "Pokemons"
         
         //se hace la descarga de datos desde la API, en este caso los pokemons y la imagenes
         pokemons = [Pokemon?] (repeating: nil, count: MAX_POKEMONS)
@@ -109,14 +105,6 @@ class TableViewController: UITableViewController, UISearchBarDelegate,UISearchRe
             }
         }
     }
-    
-    //Funcion que activa y desactiva el estado de editar
-    override func setEditing(_ editing: Bool, animated: Bool) {
-        super.setEditing(!isEditing, animated: true)
-        
-        tableView.setEditing(tableView.isEditing, animated: true)
-    }
-    
     
     //Configuracion de la barra de busqueda
     func setupSearch(){
@@ -189,39 +177,6 @@ class TableViewController: UITableViewController, UISearchBarDelegate,UISearchRe
         return cell
     }
     
-
-    //funcion para borrar los pokemons, ya sea desde la opcion de editar o arrastrando
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            pokemons.remove(at: indexPath.row)
-            filteredData.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .automatic)
-            tableView.reloadData()
-            
-        } else if editingStyle == .insert {
-           
-        }
-    }
-    
-    //Funcion que permite reordenar las posiciones de la tabla desde el modo editar
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-        
-        let pokemonMove = pokemons[fromIndexPath.row]
-        pokemons.remove(at: fromIndexPath.row)
-        
-        pokemons.insert(pokemonMove, at: to.row)
-        tableView.reloadData()
-        
-        let filterMove = filteredData[fromIndexPath.row]
-        filteredData.remove(at: fromIndexPath.row)
-        
-        filteredData.insert(filterMove, at: to.row)
-        tableView.reloadData()
-    }
-    
-    
-    
     // Override to support conditional rearranging of the table view.
     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the item to be re-orderable.
@@ -247,7 +202,6 @@ class TableViewController: UITableViewController, UISearchBarDelegate,UISearchRe
         
      }
     }
-    
     
     //configuracion del activity indicator
     func setupLoadingViews(){

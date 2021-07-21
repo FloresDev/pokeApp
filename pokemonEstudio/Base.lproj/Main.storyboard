@@ -13,7 +13,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Root View Controller-->
+        <!--Table View Controller-->
         <scene sceneID="4LZ-wY-Tyn">
             <objects>
                 <tableViewController id="5oM-b5-yRw" customClass="TableViewController" customModule="pokemonEstudio" customModuleProvider="target" sceneMemberID="viewController">
@@ -86,9 +86,7 @@
                             <outlet property="delegate" destination="5oM-b5-yRw" id="zq4-Ug-yi2"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="Y0f-kv-6iv">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="V5s-Bs-KgT"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="Y0f-kv-6iv"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cIu-k5-s2h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
