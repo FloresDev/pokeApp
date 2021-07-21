@@ -42,18 +42,6 @@ class TableViewController: UITableViewController, UISearchBarDelegate,UISearchRe
         filteredData = pokemons
         setupSearch()
         
-        //Peticion para aceptar notificaciones
-        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) {
-            (granted, error) in
-            if granted {
-                print("Permiso aceptado")
-            }else{
-                print("Sin permiso")
-                print(error.debugDescription)
-            }
-        }
-        
-        
         //se hace la descarga de datos desde la API, en este caso los pokemons y la imagenes
         pokemons = [Pokemon?] (repeating: nil, count: MAX_POKEMONS)
         filteredData = [Pokemon?] (repeating: nil, count: MAX_POKEMONS)
@@ -125,7 +113,6 @@ class TableViewController: UITableViewController, UISearchBarDelegate,UISearchRe
     //funcion para actualizar los datos cuando se haga la busqueda en la barra de busqueda
     func updateSearchResults(for searchController: UISearchController) {
         
-        
         if pokemonsDownload == MAX_POKEMONS {
             filteredData = pokemons.filter({ pokemon -> Bool in
                 guard let text = searchController.searchBar.text else { return false }
@@ -133,6 +120,7 @@ class TableViewController: UITableViewController, UISearchBarDelegate,UISearchRe
             }).sorted { $0!.name! < $1!.name! }
         }
         tableView.reloadData()
+        
     }
     
     
