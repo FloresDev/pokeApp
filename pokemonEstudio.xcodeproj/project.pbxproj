@@ -10,7 +10,6 @@
 		610C9DC22617584A00312864 /* OficialArt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610C9DC12617584A00312864 /* OficialArt.swift */; };
 		610C9DC526175AD400312864 /* Other.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610C9DC426175AD400312864 /* Other.swift */; };
 		61A7386F261DAED600F620D9 /* Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A7386E261DAED600F620D9 /* Gif.swift */; };
-		61A7387B261DB38F00F620D9 /* Gif2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 61A7387A261DB38F00F620D9 /* Gif2.gif */; };
 		61A73880261DB49C00F620D9 /* Gif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 61A7387F261DB49C00F620D9 /* Gif.gif */; };
 		61C18B38261CBEC0002C362B /* PresentationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C18B37261CBEC0002C362B /* PresentationViewController.swift */; };
 		61CD233826132B7B007E2C99 /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CD233726132B7B007E2C99 /* Results.swift */; };
@@ -49,7 +48,6 @@
 		610C9DC12617584A00312864 /* OficialArt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OficialArt.swift; sourceTree = "<group>"; };
 		610C9DC426175AD400312864 /* Other.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Other.swift; sourceTree = "<group>"; };
 		61A7386E261DAED600F620D9 /* Gif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gif.swift; sourceTree = "<group>"; };
-		61A7387A261DB38F00F620D9 /* Gif2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Gif2.gif; sourceTree = "<group>"; };
 		61A7387F261DB49C00F620D9 /* Gif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Gif.gif; sourceTree = "<group>"; };
 		61C18B37261CBEC0002C362B /* PresentationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationViewController.swift; sourceTree = "<group>"; };
 		61CD233726132B7B007E2C99 /* Results.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
@@ -117,7 +115,6 @@
 			isa = PBXGroup;
 			children = (
 				61A7387F261DB49C00F620D9 /* Gif.gif */,
-				61A7387A261DB38F00F620D9 /* Gif2.gif */,
 				61F4CF8D25FA2B1B00C2671C /* AppDelegate.swift */,
 				61F4CF8F25FA2B1B00C2671C /* SceneDelegate.swift */,
 				61F4CF9125FA2B1B00C2671C /* ViewController.swift */,
@@ -218,7 +215,6 @@
 				61FDF8982613BEA600449570 /* Pokemon Solid.ttf in Resources */,
 				61F4CF9725FA2B1B00C2671C /* Assets.xcassets in Resources */,
 				61F4CF9525FA2B1B00C2671C /* Main.storyboard in Resources */,
-				61A7387B261DB38F00F620D9 /* Gif2.gif in Resources */,
 				61A73880261DB49C00F620D9 /* Gif.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
