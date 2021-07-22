@@ -20,8 +20,8 @@ class MoveViewController: UIViewController {
                     
                     DispatchQueue.main.async{
                         self.pokeMoveLabel.text = pokeMove.name?.capitalized
-                        self.damageClassLabel.text = " Tipo de ataque: " + (pokeMove.damage_class?.name)!
-                        self.defAtackLabel.text = pokeMove.flavor_text_entries[15].flavor_text
+                        self.damageClassLabel.text = "Attack type: " + (pokeMove.damage_class?.name)!
+                        self.defAtackLabel.text = pokeMove.flavor_text_entries[0].flavor_text
                     }
                     
                     

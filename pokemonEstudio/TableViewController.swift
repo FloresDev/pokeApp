@@ -9,7 +9,7 @@ class TableViewController: UITableViewController, UISearchBarDelegate,UISearchRe
     var pokemons: [Pokemon?] = []
     var images: [UIImage?] = []
     //var images2: [UIImage?] = []
-    var MAX_POKEMONS = 0
+    var MAX_POKEMONS = 50
     var imagesDownload = 0
     var imagesDownload2 = 0
     var connection = Connection()
@@ -83,7 +83,6 @@ class TableViewController: UITableViewController, UISearchBarDelegate,UISearchRe
                                             
                                            
                                         }
-                                    
                                     }
                                 }
                             }
@@ -113,11 +112,13 @@ class TableViewController: UITableViewController, UISearchBarDelegate,UISearchRe
     //funcion para actualizar los datos cuando se haga la busqueda en la barra de busqueda
     func updateSearchResults(for searchController: UISearchController) {
         
-        if pokemonsDownload == MAX_POKEMONS {
+        if searchController.searchBar.text != "" {
             filteredData = pokemons.filter({ pokemon -> Bool in
                 guard let text = searchController.searchBar.text else { return false }
                 return pokemon!.name!.lowercased().contains(text.lowercased())
             }).sorted { $0!.name! < $1!.name! }
+        }else{
+            filteredData = pokemons
         }
         tableView.reloadData()
         
@@ -199,7 +200,7 @@ class TableViewController: UITableViewController, UISearchBarDelegate,UISearchRe
         //Loading View
         self.loadingView.frame = CGRect(x: 0, y: 0, width: 180, height: 180)
         self.loadingView.center = self.view.center
-        self.loadingView.backgroundColor = UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.7)
+        self.loadingView.backgroundColor = #colorLiteral(red: 1, green: 0.8227627873, blue: 0.1279867589, alpha: 1)
         self.loadingView.clipsToBounds = true
         self.loadingView.layer.cornerRadius = 10
         
@@ -207,7 +208,7 @@ class TableViewController: UITableViewController, UISearchBarDelegate,UISearchRe
         self.activityIndicator.frame = CGRect(x: 0, y: 0, width: 40, height: 40)
         self.activityIndicator.style = .large
         self.activityIndicator.center = self.view.center
-        self.activityIndicator.color = .white
+        self.activityIndicator.color = #colorLiteral(red: 0.2250583768, green: 0.3118225634, blue: 0.387561202, alpha: 1)
         self.activityIndicator.startAnimating()
         
         //Label
@@ -216,7 +217,7 @@ class TableViewController: UITableViewController, UISearchBarDelegate,UISearchRe
         self.loadingLabel.center = CGPoint(x: center.x, y: center.y + 40)
         self.loadingLabel.textAlignment = .center
         self.loadingLabel.text = "Loading..."
-        self.loadingLabel.textColor = .white
+        self.loadingLabel.textColor = #colorLiteral(red: 0.2250583768, green: 0.3118225634, blue: 0.387561202, alpha: 1)
     }
     
     //Funcion para mostrar la vista de loading
@@ -281,8 +282,6 @@ class TableViewController: UITableViewController, UISearchBarDelegate,UISearchRe
         
         present(alert, animated: true, completion: nil)
     }
-    
-    
     }
     
 

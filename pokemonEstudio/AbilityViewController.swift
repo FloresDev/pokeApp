@@ -22,7 +22,7 @@ class AbilityViewController: UIViewController {
                 
                 DispatchQueue.main.async{
                     self.abilityNameLabel.text = pokeAb.name
-                    self.abilityDescriLabel.text = pokeAbilities?.flavor_text_entries[13].flavor_text
+                    self.abilityDescriLabel.text = pokeAbilities?.flavor_text_entries[0].flavor_text
                     
                     print(pokeAb.name)
                     print(pokeAbilities?.flavor_text_entries[13].flavor_text)
